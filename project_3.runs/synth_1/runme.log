@@ -1,0 +1,386 @@
+
+*** Running vivado
+    with args -log single_cycle_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source single_cycle_core.tcl
+
+
+
+****** Vivado v2020.2.2 (64-bit)
+  **** SW Build 3118627 on Tue Feb  9 05:14:06 MST 2021
+  **** IP Build 3115676 on Tue Feb  9 10:48:11 MST 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source single_cycle_core.tcl -notrace
+Command: synth_design -top single_cycle_core -part xc7a100tftg256-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22588
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1027.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'single_cycle_core' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:56]
+INFO: [Synth 8-3491] module 'program_counter' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/program_counter.vhd:28' bound to instance 'pc' of component 'program_counter' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:342]
+INFO: [Synth 8-638] synthesizing module 'program_counter' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/program_counter.vhd:36]
+WARNING: [Synth 8-614] signal 'load' is read in the process but is not in the sensitivity list [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/program_counter.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'program_counter' (1#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/program_counter.vhd:36]
+INFO: [Synth 8-3491] module 'instruction_memory' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:27' bound to instance 'insn_mem' of component 'instruction_memory' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'instruction_memory' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'instruction_memory' (2#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:34]
+INFO: [Synth 8-3491] module 'adder_4b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_4b.vhd:25' bound to instance 'pc_plus_one_adder' of component 'adder_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:355]
+INFO: [Synth 8-638] synthesizing module 'adder_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_4b.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'adder_4b' (3#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_4b.vhd:32]
+INFO: [Synth 8-3491] module 'mux_2to1_4b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:25' bound to instance 'pc_next_inst_mux' of component 'mux_2to1_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:361]
+INFO: [Synth 8-638] synthesizing module 'mux_2to1_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:32]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'mux_2to1_1b' (4#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:32]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mux_2to1_4b' (5#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:32]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'IF_ID_no_branch_pc' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:371]
+INFO: [Synth 8-638] synthesizing module 'register_nb' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_nb' (6#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'IF_ID_instruction' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:379]
+INFO: [Synth 8-638] synthesizing module 'register_nb__parameterized1' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_nb__parameterized1' (6#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+INFO: [Synth 8-3491] module 'hazard_detection_unit' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/hazard_detection_unit.vhd:34' bound to instance 'hazard_detection' of component 'hazard_detection_unit' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:400]
+INFO: [Synth 8-638] synthesizing module 'hazard_detection_unit' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/hazard_detection_unit.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'hazard_detection_unit' (7#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/hazard_detection_unit.vhd:51]
+INFO: [Synth 8-3491] module 'adder_4b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_4b.vhd:25' bound to instance 'pc_plus_1_and_offset_adder' of component 'adder_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:416]
+INFO: [Synth 8-3491] module 'unsign_sign_extend_4to16' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/sign_extend_4to16.vhd:25' bound to instance 'unsign_sign_extend' of component 'unsign_sign_extend_4to16' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:423]
+INFO: [Synth 8-638] synthesizing module 'unsign_sign_extend_4to16' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/sign_extend_4to16.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'unsign_sign_extend_4to16' (8#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/sign_extend_4to16.vhd:31]
+INFO: [Synth 8-3491] module 'control_unit' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/control_unit.vhd:44' bound to instance 'ctrl_unit' of component 'control_unit' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:427]
+INFO: [Synth 8-638] synthesizing module 'control_unit' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/control_unit.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'control_unit' (9#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/control_unit.vhd:49]
+INFO: [Synth 8-3491] module 'mux_2to1_4b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_4b.vhd:25' bound to instance 'mux_write_reg1' of component 'mux_2to1_4b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:431]
+INFO: [Synth 8-3491] module 'register_file' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/register_file.vhd:26' bound to instance 'reg_file' of component 'register_file' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:439]
+INFO: [Synth 8-638] synthesizing module 'register_file' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/register_file.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'register_file' (10#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/register_file.vhd:41]
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_control_register' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:463]
+INFO: [Synth 8-638] synthesizing module 'register_nb__parameterized3' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_nb__parameterized3' (10#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_register_1' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:471]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_register_2' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:479]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_register_imm' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:487]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_write_register_1' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:495]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'ID_EX_write_register_2' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:503]
+INFO: [Synth 8-3491] module 'mux_2to1_16b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:25' bound to instance 'mux_alu_src_b' of component 'mux_2to1_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:524]
+INFO: [Synth 8-638] synthesizing module 'mux_2to1_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:32]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-3491] module 'mux_2to1_1b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_1b.vhd:25' bound to instance 'bit_mux' of component 'mux_2to1_1b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'mux_2to1_16b' (11#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:32]
+INFO: [Synth 8-3491] module 'alu' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:34' bound to instance 'alu_unit' of component 'alu' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:532]
+INFO: [Synth 8-638] synthesizing module 'alu' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:46]
+INFO: [Synth 8-3491] module 'adder_16b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_16b.vhd:25' bound to instance 'alu_result' of component 'adder_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'adder_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_16b.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'adder_16b' (12#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/adder_16b.vhd:32]
+INFO: [Synth 8-3491] module 'comparator_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/comparator_16b.vhd:34' bound to instance 'comparator' of component 'comparator_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'comparator_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/comparator_16b.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'comparator_16b' (13#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/comparator_16b.vhd:42]
+INFO: [Synth 8-3491] module 'barrel_left_shift_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:34' bound to instance 'barrel_left_shifter' of component 'barrel_left_shift_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'barrel_left_shift_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:40]
+	Parameter shift_amount bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'barrel_left_shift_comp_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:34' bound to instance 'barrel_shifter_component1' of component 'barrel_left_shift_comp_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'barrel_left_shift_comp_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'barrel_left_shift_comp_16b' (14#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'barrel_left_shift_comp_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:34' bound to instance 'barrel_shifter_component2' of component 'barrel_left_shift_comp_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'barrel_left_shift_comp_16b__parameterized1' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'barrel_left_shift_comp_16b__parameterized1' (14#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'barrel_left_shift_comp_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:34' bound to instance 'barrel_shifter_component3' of component 'barrel_left_shift_comp_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'barrel_left_shift_comp_16b__parameterized3' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'barrel_left_shift_comp_16b__parameterized3' (14#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'barrel_left_shift_comp_16b' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:34' bound to instance 'barrel_shifter_component4' of component 'barrel_left_shift_comp_16b' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'barrel_left_shift_comp_16b__parameterized5' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+	Parameter shift_amount bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'barrel_left_shift_comp_16b__parameterized5' (14#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_comp_16b.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'barrel_left_shift_16b' (15#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/barrel_left_shift_16b.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'alu' (16#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/alu.vhd:46]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_control_register' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:544]
+INFO: [Synth 8-638] synthesizing module 'register_nb__parameterized6' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_nb__parameterized6' (16#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:43]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_result' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:552]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_index' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:560]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_write_data' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:568]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_write_register_1' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:576]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'EX_MEM_write_register_2' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:584]
+INFO: [Synth 8-3491] module 'mux_2to1_16b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:25' bound to instance 'mux_mem_address' of component 'mux_2to1_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:599]
+INFO: [Synth 8-3491] module 'data_memory' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/data_memory.vhd:26' bound to instance 'data_mem' of component 'data_memory' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:605]
+INFO: [Synth 8-638] synthesizing module 'data_memory' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/data_memory.vhd:35]
+WARNING: [Synth 8-614] signal 'reset' is read in the process but is not in the sensitivity list [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/data_memory.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'data_memory' (17#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/data_memory.vhd:35]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'MEM_WB_control_register' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:614]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'MEM_WB_memory_data_register' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:622]
+	Parameter N bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'MEM_WB_alu_result' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:630]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'MEM_WB_write_reg_1' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:638]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'MEM_WB_write_reg_2' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:646]
+INFO: [Synth 8-3491] module 'mux_2to1_16b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:25' bound to instance 'mux_wdata1_src' of component 'mux_2to1_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:662]
+INFO: [Synth 8-3491] module 'mux_2to1_16b' declared at 'C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/mux_2to1_16b.vhd:25' bound to instance 'mux_out_of_bound_check' of component 'mux_2to1_16b' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:668]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'read_reg1' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:679]
+	Parameter N bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'register_nb' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/register_nb.vhd:34' bound to instance 'read_reg2' of component 'register_nb' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:687]
+INFO: [Synth 8-3491] module 'fowarding_unit' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/fowarding_unit.vhd:34' bound to instance 'EX_forwarding_unit' of component 'fowarding_unit' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:695]
+INFO: [Synth 8-638] synthesizing module 'fowarding_unit' [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/fowarding_unit.vhd:58]
+INFO: [Synth 8-256] done synthesizing module 'fowarding_unit' (18#1) [C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/fowarding_unit.vhd:58]
+INFO: [Synth 8-3491] module 'fowarding_unit' declared at 'C:/Users/Bertram/project_3/project_3.srcs/sources_1/new/fowarding_unit.vhd:34' bound to instance 'ID_forwarding_unit' of component 'fowarding_unit' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:718]
+INFO: [Synth 8-256] done synthesizing module 'single_cycle_core' (19#1) [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/single_cycle_core.vhd:56]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1027.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1027.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1027.680 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1027.680 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Bertram/project_3/project_3.srcs/constrs_1/new/constr.xdc]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clk' matched to 'port' objects. [C:/Users/Bertram/project_3/project_3.srcs/constrs_1/new/constr.xdc:2]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+Finished Parsing XDC File [C:/Users/Bertram/project_3/project_3.srcs/constrs_1/new/constr.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1101.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1101.781 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'insn_out_reg' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:68]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[0]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[1]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[2]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[3]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[4]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[5]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[6]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_process.var_insn_mem_reg[7]' [C:/Users/Bertram/Desktop/uni/comp3211/single_cycle_core/single_cycle_core/VHDL/instruction_memory.vhd:47]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'ID_EX_write_register_2' (register_nb) to 'read_reg2'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 40    
+	                9 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 10    
++---Muxes : 
+	   8 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 61    
+	   2 Input    9 Bit        Muxes := 1     
+	  16 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 133   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1101.781 ; gain = 74.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |     6|
+|3     |LUT1   |    19|
+|4     |LUT2   |    20|
+|5     |LUT3   |    27|
+|6     |LUT4   |    38|
+|7     |LUT5   |   106|
+|8     |LUT6   |   152|
+|9     |MUXF7  |    16|
+|10    |FDCE   |   244|
+|11    |FDRE   |   110|
+|12    |LD     |    11|
+|13    |IBUF   |     2|
+|14    |OBUF   |    16|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 1591.426 ; gain = 489.645
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:06 . Memory (MB): peak = 1591.426 ; gain = 563.746
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1591.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 11 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1591.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  LD => LDCE (inverted pins: G): 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+132 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:11 . Memory (MB): peak = 1591.426 ; gain = 563.746
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Bertram/project_3/project_3.runs/synth_1/single_cycle_core.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file single_cycle_core_utilization_synth.rpt -pb single_cycle_core_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 20 03:19:35 2023...
