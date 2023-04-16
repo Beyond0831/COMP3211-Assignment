@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Apr 12 13:16:59 2023
+# Process ID: 13128
+# Current directory: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15356 C:\Users\Shixing\Desktop\COMP3211 lab3 temp\project_3\project_3\project_3.xpr
+# Log file: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/vivado.log
+# Journal file: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3\vivado.jou
+# Running On: DESKTOP-OT8IPHH, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17019 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/project_3.xpr}
+update_compile_order -fileset sources_1

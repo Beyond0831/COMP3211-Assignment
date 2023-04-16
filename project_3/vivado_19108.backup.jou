@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Apr  8 09:32:33 2023
+# Process ID: 19108
+# Current directory: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18120 C:\Users\Shixing\Desktop\COMP3211 lab3 temp\project_3\project_3\project_3.xpr
+# Log file: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/vivado.log
+# Journal file: C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3\vivado.jou
+# Running On: DESKTOP-OT8IPHH, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17019 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/project_3.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source Single_cycle_core_TB_VHDL.tcl
+close_sim
+launch_simulation
+source Single_cycle_core_TB_VHDL.tcl
+save_wave_config {C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/Single_cycle_core_TB_VHDL_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/Single_cycle_core_TB_VHDL_behav.wcfg}}
+set_property xsim.view {{C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/Single_cycle_core_TB_VHDL_behav.wcfg}} [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config {C:/Users/Shixing/Desktop/COMP3211 lab3 temp/project_3/project_3/Single_cycle_core_TB_VHDL_behav.wcfg}
+source Single_cycle_core_TB_VHDL.tcl
